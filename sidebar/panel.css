@@ -1,0 +1,36 @@
+body{
+    padding: 0.2rem;
+}
+
+input[type="text"], textarea {
+    outline: none;
+    box-shadow:none !important;
+    border:1px solid #ccc !important;
+}
+
+.row{
+    padding: 0.8rem 0;
+}
+
+.collection{
+    margin-top:0.8rem;
+}
+
+.col-name{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.card-header{
+    background-color: #ffffff;
+}
+
+.btn-link{
+    color: black;
+}
+.card-body{
+    text-align: center;
+}

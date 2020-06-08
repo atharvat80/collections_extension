@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="panel.css">
+  </head>
+  <body class="bg-light">
+		<div class="container">
+			<div class="row border-bottom bg-white">
+				<div class="col">
+					<h5 style="font-weight: bold;">
+						<svg class="bi bi-plus" width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" d="M8 3.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H4a.5.5 0 010-1h3.5V4a.5.5 0 01.5-.5z" clip-rule="evenodd"/>
+							<path fill-rule="evenodd" d="M7.5 8a.5.5 0 01.5-.5h4a.5.5 0 010 1H8.5V12a.5.5 0 01-1 0V8z" clip-rule="evenodd"/>
+						</svg>
+						Start a new collection
+					</h5>
+					<form id="newColForm" class="form-inline" style="margin-top: 1rem;">
+						<div class="input-group mb-3 newColForm">
+							<input id="new_col_name" type="text" class="form-control" placeholder="Collection name" aria-label="Collection name" aria-describedby="addButton1" required>
+							<div class="input-group-append">
+								<button class="btn btn-primary" type="submit" id="addButton1">add</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>	
+
+			<div class="row">
+				<div class="col">
+					<h5 style="font-weight: bold; margin-bottom: 1rem;">
+						<svg class="bi bi-collection" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"  style="margin-right:0.3rem">
+							<path fill-rule="evenodd" d="M14.5 13.5h-13A.5.5 0 011 13V6a.5.5 0 01.5-.5h13a.5.5 0 01.5.5v7a.5.5 0 01-.5.5zm-13 1A1.5 1.5 0 010 13V6a1.5 1.5 0 011.5-1.5h13A1.5 1.5 0 0116 6v7a1.5 1.5 0 01-1.5 1.5h-13zM2 3a.5.5 0 00.5.5h11a.5.5 0 000-1h-11A.5.5 0 002 3zm2-2a.5.5 0 00.5.5h7a.5.5 0 000-1h-7A.5.5 0 004 1z" clip-rule="evenodd"/>
+						  </svg>
+						Your collections
+					</h5>
+					<div class="card collection hidden" id="addLinkDiv">
+						<div class="card-body">
+							<form id="addLinkForm">
+								<div class="form-group">
+									<label>Name</label>
+									<input type="name" class="form-control" id="add-link-name" placeholder="Website.com" required>
+								</div>
+								<div class="form-group">
+									<label>URL</label>
+									<input type="url" class="form-control" id="add-link-url" placeholder="http://www.somewhere.com" required>
+								</div>
+								<div class="float-right">
+									<button id="close-form-btn" class="btn btn-primary">cancel</button>
+									<button id="add-link-btn" class="btn btn-primary">add</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="card collection" id="tempCard" style="display:none">
+						<div class="card-header">
+							<div class="d-inline-block col-name" style="padding:0.3rem;"></div>
+							<div class="btn-group float-right" role="group">
+								<button type="button" class="btn btn-sm btn-link add-link">
+									<svg class="bi bi-plus" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" d="M8 3.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H4a.5.5 0 010-1h3.5V4a.5.5 0 01.5-.5z" clip-rule="evenodd"/>
+										<path fill-rule="evenodd" d="M7.5 8a.5.5 0 01.5-.5h4a.5.5 0 010 1H8.5V12a.5.5 0 01-1 0V8z" clip-rule="evenodd"/>
+									</svg>
+								</button>
+								<button type="button" class="btn btn-sm btn-link del-col">
+									<svg class="bi bi-x" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+										<path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z" clip-rule="evenodd"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="card-body"> 
+							Nothing in this collection yet
+						</div>
+					</div>
+					
+					<div id="collections">
+						
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		<script src="panel.js"></script>
+	</body>
+</html>

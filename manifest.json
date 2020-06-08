@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "Collections for Firefox",
+  "description": "Edge(Chromium) style collections for Firefox",
+  "version": "1.0.0",
+  "browser_specific_settings": {
+    "gecko": {
+      "id":"atharva@gmail.com",
+      "strict_min_version": "54.0a1"
+    }
+  },
+
+  "sidebar_action": {
+    "default_icon": {
+      "48": "icons/icon-1.svg",
+      "96": "icons/icon-2.svg"
+  },
+    "default_title" : "Collections",
+    "default_panel": "sidebar/panel.html"
+  },
+
+  "permissions": ["bookmarks"],
+
+  "commands": {
+    "_execute_sidebar_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      }
+    }
+  },
+  
+  "icons":{
+    "48":"icons/icon-3.svg",
+    "96":"icons/icon-4.svg"
+  },
+
+  "background": {
+    "scripts": ["sidebar/panel.js"]
+  } 
+}
